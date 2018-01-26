@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "hello test",
+  "description": "test the simple experiment",
+  "version": "1.0",
+
+  "applications": {
+    "gecko": {
+      "id": "wee-hello@lmorchard.com"
+    }
+  },
+
+  "experiment_apis": {
+    "hello": {
+      "schema": "hello/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "script": "hello/api.js",
+        "paths": [["hello"]]
+      }
+    }
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
